@@ -9,5 +9,6 @@ require(Rcpp)
 sourceCpp("src/RcppCumVar.cpp")
 
 testdata <- rnorm(10000)
-RcppCumVar(testdata)
+RcppCumVar(testdata, isSampleVar = TRUE)
+RcppCumVar(testdata, isSampleVar = FALSE)
 ```
