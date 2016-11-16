@@ -3,6 +3,6 @@
 
 #include <Rcpp.h>
 
-Rcpp::NumericVector RcppCumVar(Rcpp::NumericVector x); 
+Rcpp::NumericVector RcppCumVar(Rcpp::NumericVector x, bool isSampleVar); 
 
 #endif

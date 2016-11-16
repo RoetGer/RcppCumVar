@@ -28,7 +28,9 @@ cum.variance <- function(x) {
 sample.size <- 100000
 testdata <- rnorm(sample.size)
 
-all.equal(cum.variance(testdata), RcppCumVar(testdata))
+all.equal(cum.variance(testdata), RcppCumVar(testdata, isSampleVar = TRUE))
+
+RcppCumVar(testdata, isSampleVar=FALSE)
 
 benchmark(replications=10,
           RcppCumVar(testdata),
